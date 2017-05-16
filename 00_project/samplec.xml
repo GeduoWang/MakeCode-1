@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE directory [
+   <!ENTITY extern_attention SYSTEM "./extern_xml/attention.xml">
+]>
+<catalog>
+	<!--header section-->
+	<header>
+		<file value="sample"/>
+		<author value="janice"/>
+		<version value="1.0.0"/>
+		<date value="2017/05/01"/>
+		<brief value="this file is test for janice like "/>
+		<attention>
+  * THE PRESENT FIRMWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS
+  * WITH CODING INFORMATION REGARDING THEIR PRODUCTS IN ORDER FOR THEM TO SAVE
+  * TIME. AS A RESULT, STMICROELECTRONICS SHALL NOT BE HELD LIABLE FOR ANY
+  * DIRECT, INDIRECT OR CONSEQUENTIAL DAMAGES WITH RESPECT TO ANY CLAIMS ARISING
+  * FROM THE CONTENT OF SUCH FIRMWARE AND/OR THE USE MADE BY CUSTOMERS OF THE
+  * CODING INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS. </attention>
+		<!--Special Commands-->
+		<mainpage> My Personal Index Page
+  * @section intro_sec Introduction
+  * This is the introduction.
+  * @section install_sec Installation
+  * @subsection step1 Step 1: Opening the box</mainpage>
+		<bug value="1111111" />
+	</header>
+
+	<!--include section-->
+	<page>
+		<name value="page1" note="A documentation page"/>
+		<note>  Even more info.			
+		</note>
+	</page>
+
+	<page>
+		<name value="page2" note="Another page"/>
+		<note>  @tableofcontents
+  Leading text.
+  @section sec An example section
+  This page contains the subsections @ref subsection1 and @ref subsection2.
+  For more info see page @ref page2.
+  @subsection subsection1 The first subsection
+  Text.
+  @subsection subsection2 The second subsection
+  More text.</note>
+	</page>
+	
+	<!--include section-->
+	<include>
+		<file value="sample.h"/>
+	</include>
+
+	<!--export section-->
+	<exported>
+		<member kind='types' value="STATUS_SUCCESSFUL"    note="/* [S]Succeful */"/>
+		<member kind='constants' value="STATUS_INVALID_PARAM" note="/* [E]参数错误 */"/>
+	</exported>
+
+	<!--typedef section-->
+	<enum>
+		<member value="STATUS_SUCCESSFUL"    note="[S]Succeful"/>
+		<member value="STATUS_INVALID_PARAM" note="[E]参数错误"/>
+		<member value="STATUS_DEVICE_NOT_FOUND" note="[E]设备找不到"/>
+		<member value="STATUS_INVALID_DEVICEHANDLE" note="[E]无效设备"/>
+		<member value="STATUS_OPEN_FAILED"    note="[E]打开失败"/>
+		<member value="STATUS_INVALID_BARNUM" note="[E]无效板卡ID"/>
+		<member value="STATUS_ALLOC_FAILED"   note="[E]分配内存失败"/>
+		<member value="STATUS_INTERNAL_ERROR" note="[E]内部错误"/>
+
+		<member value="STATUS_DMA_TIMEOUT"  note="[W]DMA超时失败"/>
+		<member value="STATUS_JOB_LOST"     note="[W]业务数据指针无效"/>
+		<name   value="ERRCODE_STATUS" note=""/>
+	</enum>
+
+	<!--struct or unions section-->
+	<struct_unions >
+	    <!-- <0>struct <1>unions -->	
+		<kind type="0"/>
+		<member type="ULONG" value="ulChannelIndex" note="test"/>
+		<member type="ULONG" value="ulDevAddrOffset" note=""/>
+		<member type="void *" value="pDataBuffer" note=""/>
+		<member type="ULONG" value="ulDmaSize" note=""/>
+		<member type="ULONG" value="ulDmaDir" note=""/>
+		<name   value="ST_DMA_INFO, *PST_DMA_INFO" note=""/>
+	</struct_unions>
+
+	<!--function section-->
+	<class>
+	    <!-- <0>basic <1>expport <2>class -->	
+		<kind value="0"/>
+		<name value="Test"/>
+		<brief value="Main routine for HID mouse / keyboard class application"/>
+		<note value="this file is test for"/>
+		<section>
+		</section>
+	</class>
+	
+	<!--function section-->
+	<function>
+	  <!-- <0>basic <1>expport <2>class -->	
+		<kind value="0"/>
+		<name value="main"/>
+		<brief value="Main routine for HID mouse / keyboard class application"/>
+		<param value="void"/>
+		<retval value="int"/>
+		<note value="this file is test for"/>
+		<section>
+			<in_note value="explain params"/>
+			<in_note value="call hello function"/>
+			<in_note value="return back"/>
+		</section>			 
+	</function>
+	
+	<function>
+	  <!-- <0>basic <1>expport <2>class -->	
+		<kind value="0"/>
+		<name value="hello"/>
+		<brief value="voi"/>
+		<param value="char *"/>
+		<retval value="void"/>
+		<note value="this file is test for"/>
+		<section>
+		</section>			 
+	</function>
+	
+	<tailer>
+	  <!-- <0>basic <1>expport <2>class -->	
+		<right value="(C) COPYRIGHT STMicroelectronics"/>
+	</tailer>	
+</catalog>
